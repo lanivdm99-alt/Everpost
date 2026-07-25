@@ -22,4 +22,7 @@ Route::middleware(['auth', EnsureAccountReady::class, EnsureHasWorkspace::class]
             ],
         ]);
     })->name('app.content-studio');
+
+    Route::get('content-os', fn () => Inertia::render('content-os/Index'))
+        ->name('app.content-os');
 });
