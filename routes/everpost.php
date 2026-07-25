@@ -28,4 +28,7 @@ Route::middleware(['auth', EnsureAccountReady::class, EnsureHasWorkspace::class]
 
     Route::get('competitors', fn () => Inertia::render('competitors/Index'))
         ->name('app.competitors');
+
+    Route::get('blog-funnel', fn () => Inertia::render('blog-funnel/Index'))
+        ->name('app.blog-funnel');
 });
