@@ -25,4 +25,7 @@ Route::middleware(['auth', EnsureAccountReady::class, EnsureHasWorkspace::class]
 
     Route::get('content-os', fn () => Inertia::render('content-os/Index'))
         ->name('app.content-os');
+
+    Route::get('competitors', fn () => Inertia::render('competitors/Index'))
+        ->name('app.competitors');
 });
