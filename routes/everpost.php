@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::middleware(['auth', EnsureAccountReady::class, EnsureHasWorkspace::class])->group(function () {
+    Route::get('organized-os', fn () => Inertia::render('organized-os/Index'))
+        ->name('app.organized-os');
+
     Route::get('content-studio', function () {
         return Inertia::render('content-studio/Index', [
             'platforms' => [
